@@ -1,6 +1,9 @@
 var fs = require('fs');
 var myTwitterKeys = require('./keys.js');
 var parameters= process.argv.slice(2);
+var twitter = require('twitter');
+var spotify= require('spotify');
+var request = require(request)
 
 
 fs.readFile(params[0], 'utf8', function (err, data){
@@ -48,7 +51,12 @@ function excecuteApp (parameters){
 
     },
      'help': function () {
-      con log manual from text file;
+        parameter = fs.readFile("man.txt", "utf8", function(err, data){
+          var output = data.split(',');
+          for(var i = 0; i < output.length;i++){
+            console.log(output[i])
+    }
+  }
 
     },
      'default': function () {
@@ -56,7 +64,7 @@ function excecuteApp (parameters){
     }
   };
 
-  (allParameters[parameters] || allParameters['default'])();
+  parameter || allParameters['default'])();
 
   }
 }
