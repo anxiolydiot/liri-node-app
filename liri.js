@@ -3,15 +3,15 @@ var myTwitterKeys = require('./keys.js');
 var parameters= process.argv.slice(2);
 var twitter = require('twitter');
 var spotify= require('spotify');
-var request = require(request)
+var request = require('request')
 
 
-fs.readFile(params[0], 'utf8', function (err, data){
-  var output = data.split(',');
-  for(var i = 0; i < output.length;i++){
-    console.log(output[i])
-  }
-})
+// fs.readFile(params[0], 'utf8', function (err, data){
+//   var output = data.split(',');
+//   for(var i = 0; i < output.length;i++){
+//     console.log(output[i])
+//   }
+// })
 
 // function excecuteApp (parameters){
 //   switch (parameters [0] {
@@ -51,14 +51,14 @@ function excecuteApp (parameters){
 
     },
      'help': function () {
-        parameter = fs.readFile("man.txt", "utf8", function(err, data){
+        parameter = fs.readFile("man.txt", "utf8", function(err, data){   
           var output = data.split(',');
           for(var i = 0; i < output.length;i++){
             console.log(output[i])
-    }
-  }
-
-    },
+          }
+        }
+      },
+     
      'default': function () {
     console.log( Please Type a Valid Parameter or Type <help> To Read The Manual);
     }
