@@ -42,7 +42,7 @@ function excecuteApp (parameters){
       get the tweets func;
 
     },
-    'spotify': function () {
+    'spotify': function (userArgument) {
       parameter = spotify (){
         if (parameters[1] === undefined){
           spotify.search({ type: 'track', query: "What's My Age Again?" }, function(err, data) {
@@ -50,7 +50,10 @@ function excecuteApp (parameters){
               console.log('Error occurred: ' + err);
             return;
     }
-        else{
+        else if (parameters[1] != undefined){
+          spotify.search({ type: 'track', query: userArgument}, function(err, data) {
+            var trackInfo = data.tracks.items[0];
+
           songInfo = "Arist:"
 
         }
