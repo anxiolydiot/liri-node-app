@@ -1,5 +1,5 @@
 var fs = require('fs');
-var myTwitterKeys = require('./keys.js');
+var myTwitterKeys = require('keys.js');
 var parameters= process.argv.slice(2);
 var twitter = require('twitter');
 var spotify= require('spotify');
@@ -43,10 +43,25 @@ function excecuteApp (parameters){
 
     },
     'spotify': function () {
-      get the spotify func;
+      parameter = spotify (){
+        if (parameters[1] === undefined){
+          spotify.search({ type: 'track', query: "What's My Age Again?" }, function(err, data) {
+            if ( err ) {
+              console.log('Error occurred: ' + err);
+            return;
+    }
+        else{
+          songInfo = "Arist:"
+
+        }
+    // Do something with 'data' 
+});
+        }
+      }
 
     },
     'movie': function () {
+       parameter = 
       get the movie func;
 
     },
@@ -64,7 +79,7 @@ function excecuteApp (parameters){
     }
   };
 
-  parameter || allParameters['default'])();
+  (parameter || allParameters['default'])();
 
   }
 }
