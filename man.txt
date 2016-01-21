@@ -1,0 +1,1 @@
+LIRI COMMAND LINE APPLICATION MANUAL,LIRI is a Language Interpretation and Recognition Interface,LIRI is be a command line node app that takes in paramaters and gives you back data, USAGE: node liri.js <argument(s)>, ARGUMENTS:, <tweets> //returns 20 most recent tweets, <spotify> <'song name'> // retuns song information, '<movie name here>' //returns movie information

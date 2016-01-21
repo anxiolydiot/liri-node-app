@@ -94,4 +94,16 @@ function movieThis(){
   })
 };
 
+
+
+function manual(){
+  fs.readFile( 'man.txt' , 'utf8', function (err, data){
+  var output = data.split(',');
+  for(var i = 0; i < output.length;i++){
+    console.log(output[i])
+  }
+})
+
+
+}
        
