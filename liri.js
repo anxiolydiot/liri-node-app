@@ -40,14 +40,11 @@ var request = require('request');
       break;
     case "help":
       manual();
-      break
-    case "":
-      noArgument();
       break;
-    case "":
-      notValid();
-      break;
-    default: 
+      default:
+
+    console.log("LIRI Node app type 'help' for manual");
+
     ;
 
   }
@@ -106,4 +103,9 @@ function manual(){
 
 
 }
-       
+
+function noArgument (){
+  console.log("Please Specify a valid argument or type 'help' to view the App manual")
+
+}
+  
